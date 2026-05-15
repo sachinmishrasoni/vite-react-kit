@@ -2,62 +2,69 @@
 
 Modern React boilerplate CLI built with Vite.
 
-Create scalable React starter projects with Bootstrap, MUI, TypeScript, JavaScript, and more.
+Create scalable and production-ready React starter projects with Bootstrap, MUI, TypeScript, JavaScript, and more.
 
 ---
 
 ## Features
 
-* Vite + React setup
-* JavaScript & TypeScript support
+* Interactive CLI setup
+* Vite + React configuration
+* JavaScript & TypeScript templates
 * Bootstrap templates
-* MUI templates
+* Material UI templates
 * Scalable folder structure
-* Axios API layer
+* Axios API architecture
 * Environment configuration
 * Reusable services architecture
-* Clean project structure
-* Ready-to-use boilerplate
+* Clean and maintainable codebase
 * Fast project generation
+* Optional dependency installation
+* Optional Git initialization
 
 ---
 
-## Installation
+## Quick Start
 
-No installation required.
-
-Use directly with:
+Run directly using:
 
 ```bash
-npx vite-react-kit <template-name> <project-name>
+npx vite-react-kit
 ```
 
 ---
 
-## Usage
+## Interactive CLI
 
-### Bootstrap TypeScript
+After running the command, the CLI will ask:
 
-```bash
-npx vite-react-kit bootstrap-ts my-app
+```txt
+? Select a template
+❯ Bootstrap TypeScript
+  Bootstrap JavaScript
+  MUI TypeScript
+  MUI JavaScript
 ```
 
-### Bootstrap JavaScript
+Then:
 
-```bash
-npx vite-react-kit bootstrap-js my-app
+```txt
+? Enter project name:
+my-app
 ```
 
-### MUI TypeScript
+Optional setup prompts:
 
-```bash
-npx vite-react-kit mui-ts my-app
+```txt
+? Install dependencies?
+❯ Yes
+  No
 ```
 
-### MUI JavaScript
-
-```bash
-npx vite-react-kit mui-js my-app
+```txt
+? Initialize git repository?
+❯ Yes
+  No
 ```
 
 ---
@@ -73,7 +80,7 @@ npx vite-react-kit mui-js my-app
 
 ---
 
-## Project Structure
+## Generated Project Structure
 
 ```txt
 src/
@@ -183,7 +190,7 @@ npm run dev
 
 ## Publish New Version
 
-Update version:
+Update package version:
 
 ```bash
 npm version patch
@@ -209,7 +216,9 @@ Upcoming templates and features:
 * Authentication starter
 * Admin dashboard starter
 * Theme configuration
-* CLI interactive prompts
+* Interactive advanced prompts
+* Dark mode starter
+* Multi-layout architecture
 
 ---
 
