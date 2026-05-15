@@ -229,4 +229,4 @@ MIT License
 
 ## Author
 
-Built with React and Vite by Sachin Mishra Soin (EMISAM).
+Built with React and Vite by Sachin Mishra Soni (EMISAM).
