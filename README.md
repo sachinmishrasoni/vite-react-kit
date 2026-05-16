@@ -6,7 +6,7 @@ Create scalable and production-ready React starter projects with Bootstrap, MUI,
 
 ---
 
-## Features
+# Features
 
 * Interactive CLI setup
 * Vite + React configuration
@@ -14,54 +14,55 @@ Create scalable and production-ready React starter projects with Bootstrap, MUI,
 * Bootstrap templates
 * Material UI templates
 * Scalable folder structure
+* Existing project structure support
 * Axios API architecture
 * Environment configuration
 * Reusable services architecture
 * Clean and maintainable codebase
-* Fast project generation
 * Optional dependency installation
 * Optional Git initialization
+* Fast project generation
 
 ---
 
-## Quick Start
+# Quick Start
 
 Run directly using:
 
-```bash
+```bash id="zmu7tc"
 npx vite-react-kit
 ```
 
 ---
 
-## Interactive CLI
+# Interactive CLI
 
 After running the command, the CLI will ask:
 
-```txt
+```txt id="kn7x1y"
 ? Select a template
-❯ Bootstrap TypeScript
-  Bootstrap JavaScript
-  MUI TypeScript
+❯ MUI TypeScript
   MUI JavaScript
+  Bootstrap TypeScript
+  Bootstrap JavaScript
 ```
 
 Then:
 
-```txt
+```txt id="1ljj5k"
 ? Enter project name:
 my-app
 ```
 
 Optional setup prompts:
 
-```txt
+```txt id="n5smhq"
 ? Install dependencies?
 ❯ Yes
   No
 ```
 
-```txt
+```txt id="ujz1h0"
 ? Initialize git repository?
 ❯ Yes
   No
@@ -69,7 +70,40 @@ Optional setup prompts:
 
 ---
 
-## Available Templates
+# Existing Project Structure Mode
+
+Apply scalable folder architecture to an existing React/Vite project.
+
+Run inside your existing project:
+
+```bash id="bbyknu"
+npx vite-react-kit structure
+```
+
+Then select:
+
+```txt id="tvb99g"
+? Select project type
+❯ TypeScript
+  JavaScript
+```
+
+Features:
+
+* Detect existing `src` folder
+* Create backup automatically
+* Apply professional scalable architecture
+* Safe structure replacement
+
+Backup example:
+
+```txt id="7aqdlu"
+src → src_backup
+```
+
+---
+
+# Available Templates
 
 | Template     | Description                           |
 | ------------ | ------------------------------------- |
@@ -80,9 +114,9 @@ Optional setup prompts:
 
 ---
 
-## Generated Project Structure
+# Generated Project Structure
 
-```txt
+```txt id="zkdxmx"
 src/
 │
 ├── assets/
@@ -124,11 +158,11 @@ src/
 
 ---
 
-## Services Architecture
+# Services Architecture
 
-### API Layer
+## API Layer
 
-```txt
+```txt id="3c7vtw"
 services/api/
 ├── apiConfig.ts
 ├── axiosInstance.ts
@@ -136,24 +170,24 @@ services/api/
 └── interceptor.ts
 ```
 
-### Storage Services
+## Storage Services
 
-```txt
+```txt id="k3dxba"
 services/storage/
 ├── localStorage.service.ts
 └── sessionStorage.service.ts
 ```
 
-### Notification Service
+## Notification Service
 
-```txt
+```txt id="8v5o0v"
 services/notifications/
 └── toast.service.ts
 ```
 
 ---
 
-## Tech Stack
+# Tech Stack
 
 * React
 * Vite
@@ -163,48 +197,61 @@ services/notifications/
 * JavaScript
 * Axios
 * ESLint
+* Node.js CLI
 
 ---
 
-## Development
+# Local Development
 
 Clone the repository:
 
-```bash
+```bash id="9dh5kb"
 git clone https://github.com/your-username/vite-react-kit.git
 ```
 
 Install dependencies:
 
-```bash
+```bash id="xam4qb"
 npm install
 ```
 
-Run development server:
+Run locally:
 
-```bash
-npm run dev
+```bash id="mu7ynr"
+npm link
+```
+
+Test CLI:
+
+```bash id="2gbggz"
+vite-react-kit
+```
+
+Test structure mode:
+
+```bash id="clzjlwm"
+vite-react-kit structure
 ```
 
 ---
 
-## Publish New Version
+# Publish New Version
 
 Update package version:
 
-```bash
+```bash id="xjmg1x"
 npm version patch
 ```
 
 Publish package:
 
-```bash
+```bash id="mjlwmz"
 npm publish --access public
 ```
 
 ---
 
-## Roadmap
+# Roadmap
 
 Upcoming templates and features:
 
@@ -219,10 +266,11 @@ Upcoming templates and features:
 * Interactive advanced prompts
 * Dark mode starter
 * Multi-layout architecture
+* Smart structure merge mode
 
 ---
 
-## Contributing
+# Contributing
 
 Contributions are welcome.
 
@@ -230,12 +278,12 @@ Feel free to open issues and submit pull requests.
 
 ---
 
-## License
+# License
 
 MIT License
 
 ---
 
-## Author
+# Author
 
 Built with React and Vite by Sachin Mishra Soni (EMISAM).
