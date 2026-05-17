@@ -1,0 +1,42 @@
+vite-react-kit/
+│
+├── cli/
+│   │
+│   ├── index.js
+│   │
+│   ├── prompts/
+│   │   └── projectPrompts.js
+│   │
+│   ├── generators/
+│   │   │
+│   │   ├── createViteApp.js
+│   │   │
+│   │   ├── structure/
+│   │   │   ├── js.js
+│   │   │   └── ts.js
+│   │   │
+│   │   ├── ui/
+│   │   │   ├── bootstrap.js
+│   │   │   ├── mui.js
+│   │   │   └── tailwind.js
+│   │   │
+│   │   ├── store/
+│   │   │   ├── reduxToolkit.js
+│   │   │   └── zustand.js
+│   │   │
+│   │   ├── features/
+│   │   │   ├── router.js
+│   │   │   ├── axios.js
+│   │   │   ├── reactQuery.js
+│   │   │   ├── toastify.js
+│   │   │   └── sweetAlert.js
+│   │   │
+│   │   └── config/
+│   │       ├── alias.js
+│   │       ├── eslint.js
+│   │       └── prettier.js
+│
+├── package.json
+├── README.md
+├── .gitignore
+└── .npmignore

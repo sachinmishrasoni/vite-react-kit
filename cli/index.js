@@ -4,6 +4,8 @@ import chalk from "chalk";
 
 import projectPrompts from "./prompts/projectPrompts.js";
 
+import createViteApp from "./generators/createViteApp.js";
+
 const run = async () => {
     try {
         console.log(
@@ -15,7 +17,27 @@ const run = async () => {
         const config =
             await projectPrompts();
 
-        console.log(config);
+        const {
+            projectName,
+            language,
+        } = config;
+
+        console.log(
+            chalk.yellow(
+                "\nCreating Vite project...\n"
+            )
+        );
+
+        createViteApp(
+            projectName,
+            language
+        );
+
+        console.log(
+            chalk.green(
+                "\nVite project created successfully\n"
+            )
+        );
     } catch (error) {
         console.error(error);
     }
