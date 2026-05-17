@@ -1,12 +1,24 @@
 #!/usr/bin/env node
 
-import createProject from "./createProject.js";
-import applyStructure from "./applyStructure.js";
+import chalk from "chalk";
 
-const command = process.argv[2];
+import projectPrompts from "./prompts/projectPrompts.js";
 
-if (command === "structure") {
-    applyStructure();
-} else {
-    createProject();
-}
+const run = async () => {
+    try {
+        console.log(
+            chalk.cyan(
+                "\nWelcome to vite-react-kit\n"
+            )
+        );
+
+        const config =
+            await projectPrompts();
+
+        console.log(config);
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+run();
