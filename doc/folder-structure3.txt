@@ -1,0 +1,108 @@
+vite-react-kit/
+│
+├── cli/
+│   │
+│   ├── index.js
+│   │
+│   ├── prompts/
+│   │   └── projectPrompts.js
+│   │
+│   └── generators/
+│       │
+│       ├── project/
+│       │   ├── createProject.js
+│       │   ├── installDependencies.js
+│       │   └── initializeGit.js
+│       │
+│       ├── structure/
+│       │   ├── js.js
+│       │   └── ts.js
+│       │
+│       ├── ui/
+│       │   ├── bootstrap.js
+│       │   ├── mui.js
+│       │   └── tailwind.js
+│       │
+│       ├── store/
+│       │   ├── reduxToolkit.js
+│       │   └── zustand.js
+│       │
+│       ├── features/
+│       │   ├── router.js
+│       │   ├── axios.js
+│       │   ├── reactQuery.js
+│       │   ├── toastify.js
+│       │   └── sweetAlert.js
+│       │
+│       └── config/
+│           ├── alias.js
+│           ├── eslint.js
+│           └── prettier.js
+│
+├── templates/
+│   │
+│   ├── base/
+│   │   │
+│   │   ├── js/
+│   │   │   │
+│   │   │   ├── public/
+│   │   │   ├── src/
+│   │   │   │   ├── App.jsx
+│   │   │   │   ├── main.jsx
+│   │   │   │   └── assets/
+│   │   │   │
+│   │   │   ├── .gitignore
+│   │   │   ├── eslint.config.js
+│   │   │   ├── index.html
+│   │   │   ├── package.json
+│   │   │   ├── vite.config.js
+│   │   │   └── README.md
+│   │   │
+│   │   └── ts/
+│   │       │
+│   │       ├── public/
+│   │       ├── src/
+│   │       │   ├── App.tsx
+│   │       │   ├── main.tsx
+│   │       │   └── assets/
+│   │       │
+│   │       ├── .gitignore
+│   │       ├── eslint.config.js
+│   │       ├── index.html
+│   │       ├── package.json
+│   │       ├── tsconfig.json
+│   │       ├── tsconfig.app.json
+│   │       ├── tsconfig.node.json
+│   │       ├── vite.config.ts
+│   │       └── README.md
+│   │
+│   ├── structure/
+│   │   │
+│   │   ├── js/
+│   │   │   ├── App.jsx
+│   │   │   ├── main.jsx
+│   │   │   └── global.css
+│   │   │
+│   │   └── ts/
+│   │       ├── App.tsx
+│   │       ├── main.tsx
+│   │       └── global.css
+│   │
+│   ├── features/
+│   │   │
+│   │   ├── router/
+│   │   ├── axios/
+│   │   ├── reactQuery/
+│   │   ├── toastify/
+│   │   └── sweetAlert/
+│   │
+│   └── config/
+│       │
+│       ├── alias/
+│       ├── eslint/
+│       └── prettier/
+│
+├── package.json
+├── README.md
+├── .gitignore
+└── .npmignore

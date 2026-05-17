@@ -27,7 +27,7 @@ const templates = [
     },
 ];
 
-const createProject = async () => {
+const createProjectOld = async () => {
     try {
         console.log(
             chalk.cyan("\nWelcome to vite-react-kit\n")
@@ -158,4 +158,4 @@ const createProject = async () => {
     }
 };
 
-export default createProject;
+export default createProjectOld;
