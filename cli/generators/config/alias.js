@@ -1,52 +1,45 @@
 import fs from "fs-extra";
 import path from "path";
+import { fileURLToPath } from "url";
+import logger from "../../utils/logger.js";
 
-const setupAlias = async (
-    targetPath,
-    language
-) => {
-    const viteConfigPath =
-        language === "ts"
-            ? "vite.config.ts"
-            : "vite.config.js";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-    const viteConfig = `
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
-
-export default defineConfig({
-    plugins: [react()],
-    resolve: {
-        alias: {
-            "@": path.resolve(__dirname, "./src"),
-        },
-    },
-});
-`;
-
-    await fs.writeFile(
-        path.join(targetPath, viteConfigPath),
-        viteConfig
-    );
-
-    if (language === "ts") {
-        const tsConfig = {
-            compilerOptions: {
-                baseUrl: ".",
-                paths: {
-                    "@/*": ["src/*"],
-                },
-            },
-        };
-
-        await fs.writeJson(
-            path.join(targetPath, "tsconfig.json"),
-            tsConfig,
-            {
-                spaces: 2,
-            }
+const setupAlias = async (targetPath, language) => {
+    try {
+        const aliasTemplatePath = path.join(
+            __dirname,
+            "../../../templates/config/alias",
+            language
         );
+
+        const viteConfigFile =
+            language === "ts"
+                ? "vite.config.ts"
+                : "vite.config.js";
+
+        await fs.copy(
+            path.join(aliasTemplatePath, viteConfigFile),
+            path.join(targetPath, viteConfigFile),
+            { overwrite: true }
+        );
+
+        if (language === "ts") {
+            await fs.copy(
+                path.join(aliasTemplatePath, "tsconfig.json"),
+                path.join(targetPath, "tsconfig.json"),
+                { overwrite: true }
+            );
+        } else {
+            await fs.copy(
+                path.join(aliasTemplatePath, "jsconfig.json"),
+                path.join(targetPath, "jsconfig.json"),
+                { overwrite: true }
+            );
+        }
+    } catch (error) {
+        logger.error(error.message);
     }
 };
 

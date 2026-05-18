@@ -5,35 +5,16 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const createProject = async (
-    projectName,
-    language
-) => {
-    const templatePath = path.join(
-        __dirname,
-        "../../../templates/base",
-        language
-    );
+const createProject = async (projectName, language) => {
+    const templatePath = path.join(__dirname, "../../../templates/base", language);
 
-    const targetPath = path.join(
-        process.cwd(),
-        projectName
-    );
+    const targetPath = path.join(process.cwd(), projectName);
 
-    await fs.copy(
-        templatePath,
-        targetPath
-    );
+    await fs.copy(templatePath, targetPath);
 
-    const packageJsonPath = path.join(
-        targetPath,
-        "package.json"
-    );
+    const packageJsonPath = path.join(targetPath, "package.json");
 
-    const packageJson =
-        await fs.readJson(
-            packageJsonPath
-        );
+    const packageJson = await fs.readJson(packageJsonPath);
 
     packageJson.name = projectName;
 

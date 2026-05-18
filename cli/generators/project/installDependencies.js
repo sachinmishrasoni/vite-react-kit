@@ -1,8 +1,6 @@
 import { execSync } from "child_process";
 
-const installDependencies = (
-    targetPath
-) => {
+const installDependencies = (targetPath) => {
     execSync("npm install", {
         cwd: targetPath,
         stdio: "inherit",
